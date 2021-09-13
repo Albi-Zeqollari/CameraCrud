@@ -1,0 +1,54 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Add Camera</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="camera.name"
+        name="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Model</label>
+      <input
+        type="text"
+        class="form-control"
+        id="model"
+        [(ngModel)]="camera.model"
+        name="model"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Resolution</label>
+      <input
+        type="text"
+        class="form-control"
+        id="resolution"
+        [(ngModel)]="camera.resolution"
+        name="resolution"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Ip</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ip"
+        [(ngModel)]="camera.ip"
+        name="ip"
+      />
+    </div>
+    <br />
+    <div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+  </form>
+
+  <br />
+</div>

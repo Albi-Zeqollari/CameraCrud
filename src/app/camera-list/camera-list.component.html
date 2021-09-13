@@ -1,0 +1,45 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+  crossorigin="anonymous"
+/>
+
+<h2>Camera List</h2>
+
+<table class="table table-light">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Resolution</th>
+      <th>Ip</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let camera of cameras">
+      <td>{{ camera.name }}</td>
+      <td>{{ camera.model }}</td>
+      <td>{{ camera.resolution }}</td>
+      <td>{{ camera.ip }}</td>
+      <td>
+        <button (click)="updateCamera(camera.id)" class="btn btn-info">
+          Update</button
+        >&nbsp;&nbsp;
+        <button (click)="deleteCamera(camera.id)" class="btn btn-danger">
+          Delete</button
+        >&nbsp;&nbsp;
+        <button (click)="cameraDetails(camera.id)"  class="btn btn-success">
+          Details
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <app-chart></app-chart>
+</div>
+
+
